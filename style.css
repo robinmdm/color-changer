@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&display=swap");
 
+/* a function for base color or default color */
 :root {
   --main-color: #8e44ad;
 }
+
+/* all the page will inherit this format */
 
 * {
   font-family: "Cabin", sans-serif;
@@ -13,6 +16,8 @@
   transition: all 0.2s linear;
 }
 
+/* the main container for all the things inside container from the HTML section */
+
 .container {
   min-height: 100vh;
   background: var(--main-color);
@@ -22,6 +27,8 @@
   padding-bottom: 80px;
 }
 
+/* the h1 tag -> everything about color changer text */
+
 .container h1 {
   color: var(--main-color);
   background: #fff;
@@ -30,6 +37,8 @@
   font-size: 6em;
   padding: 0.5em 0.8em;
 }
+
+/* everything inside color switcher */
 
 .color-switcher {
   position: fixed;
@@ -41,9 +50,13 @@
   z-index: 1000;
 }
 
+/* for javascript function here the active class made in the javascript section */
+
 .color-switcher.active {
   right: 0px;
 }
+
+/* the h3 tag -> select color text will be formatted from here */
 
 .color-switcher h3 {
   color: var(--main-color);
@@ -53,6 +66,8 @@
   padding: 5px 0;
   text-align: center;
 }
+
+/* the icon switch will be formatted by this style format */
 
 .color-switcher .switcher-btn {
   color: var(--main-color);
@@ -65,9 +80,13 @@
   font-size: 35px;
 }
 
+/* the cog (setting icon) will be animated by this format */
+
 .color-switcher .switcher-btn i {
   animation: rotate 2s linear infinite;
 }
+
+/* here putting the function for the rotate -> assigning fuctionality */
 
 @keyframes rotate {
   100% {
@@ -75,11 +94,16 @@
   }
 }
 
+/* here formatting the different colors in arranged way, heer are 9 colors
+so we want 3*3, and with flex and justify content its working  */
+
 .color-switcher .theme-buttons-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* here how the theme buttons will look like the size and everything */
 
 .color-switcher .theme-buttons-container .theme-buttons {
   display: block;
